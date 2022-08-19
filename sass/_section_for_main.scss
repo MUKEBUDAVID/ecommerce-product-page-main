@@ -157,6 +157,141 @@ flex-direction: column;
 
 
 
- 
+ .main_rigth{
+  // background-color:red;
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+
+  h3{
+    color:$Orange ;
+    text-transform: uppercase;
+    font-size:max(1vw,1px) ;
+    word-spacing:2px;
+    margin-top: 70px;
+    margin-left: 98px;
+  }
+
+h1 {
+      color:$Very_vark_blue;
+      text-transform: uppercase;
+      font-size: max(2vw, 1px);
+      word-spacing: 2px;
+      margin-top: 13px;
+      margin-left: 92px;
+      text-transform: capitalize;
+}
+.corps{
+
+  color:$Dark_grayish_blue;
+  text-transform: uppercase;
+  font-size: max(0.8vw, 1px);
+  word-spacing: 2px;
+  margin-top: 29px;
+  margin-left: 93px;
+  width: 74%;
+  height: 10%;
+  text-transform: capitalize;
+  word-spacing:2px;
+  line-height:20px;
+
+}
+.prix{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     margin-top: 22px;
+     margin-left: 93px;
+}
+
+
+.prix p:nth-child(1) {
+  color:$Very_vark_blue;
+  font-size:max(1.2vw,1px);
+  font-weight: 900;
+  
+}
+
+.prix p:nth-child(2) {
+  color: $Orange;
+  font-size: max(0.8vw, 1px);
+  font-weight: 900;
+  margin-left: 10px;
+  background-color:transparentize($Orange,0.8);
+
+}
+.reduction{
+  color: $Grayish_blue;
+  font-size: max(0.8vw, 1px);
+  font-weight: 900;
+  margin-left: 90px;
+  margin-top: 10px;
+  text-decoration: line-through;
+}
+
+////////
+
+
+.check{
+  display: flex;
+  margin-top: 30px;
+  margin-left: 87px;
+}
+.plus,.moin{
+  width: max(3vw, 1px);
+  height: max(3vw, 1px);
+  border:0px solid transparent ;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.plus:active,
+.moin:active {
+  border: 0px solid transparent;
+  cursor: pointer;
+  background-color:transparentize($Orange, 0.8);
+  
+}
+.zero{
+  width: max(3vw, 1px);
+  height: max(3vw, 1px);
+  border:0px solid transparent;
+
+}
+
+.add{
+  width: max(18vw, 1px);
+  height: max(3vw, 1px);
+  border:0px solid transparent;
+  border-radius: 4px;
+  margin-left: 20px;
+  background-color: $Orange;
+  color:$White;
+  cursor: pointer;
+  transform:scale(100%) ;
+  transition:transform 100ms ease-in;
+    
+}
+
+.add:hover {
+ opacity:0.6 ;
+
+}
+.add:active {
+  transform: scale(80%);
+}
+.add img{
+  width:max(15px,1px);
+  height: max(15px, 1px);
+  margin-right:10px;
+}
+.add span {
+  font-weight: 900;
+  font-size: max(1vw,1px);
+}
+
+
+ }
 
 }
