@@ -1,0 +1,162 @@
+@media screen and (min-width:map-get($breakpoint, Desktop)) {
+    .main_left{
+       
+   .entete {
+    width:max(34vw, 100px);
+    height:max(57vh, 100px);
+    border-radius:10px;
+    object-fit: cover;
+    cursor: pointer;
+   
+    
+
+   }
+
+.thumbnail{
+// align-items: center;
+// justify-content: center;
+display: grid;
+grid-template-columns:repeat(4,1fr) ;
+grid-template-rows:1fr;
+grid-gap:20px;
+flex-direction: column;
+}
+
+   .thumbnail img{
+    width: max(7vw, 1px);
+     height: max(13vh, 1px);
+     border-radius:10px;
+     margin-top:20px;
+     cursor: pointer;
+}
+
+   .thumbnail img:hover{
+     opacity:0.6 ;
+   }
+
+
+
+  //  class for js
+   .focus_thumbnail{
+    outline:4px solid $Orange ;
+    opacity: 0.4;;
+   }
+   
+ }
+
+
+
+
+ .modale {
+
+   &_entete {
+     width: max(30vw, 100px);
+     height: max(57vh, 100px);
+     border-radius: 10px;
+     margin-top:22px;
+     object-fit: cover;
+}
+
+   &_thumbnail {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: 1fr;
+     grid-gap: 20px;
+     flex-direction: column;
+     margin-top:38px ;
+   }
+
+   &_thumbnail img {
+     width: max(5vw, 70px);
+     height: max(5vh, 70px);
+     border-radius: 10px;
+     margin-top: -14px;
+     cursor: pointer;
+
+     //  padding: 10px 10px 10px 10px;
+   }
+
+   &_thumbnail img:hover {
+     opacity: 0.6;
+   }
+
+   &_close{
+    width:30px;
+    height:30px;
+    margin-left:35%;
+   }
+
+   &_close:hover {
+     width: 30px;
+     height: 30px;
+     margin-left: 35%;
+     border-radius:50%;
+    outline: 10px solid $Orange;
+     background-color: $Orange;
+
+   }
+
+   .next,.previous{
+    width:30px;
+    height:30px;
+    outline:10px solid $White;
+    border-radius:50%;
+    background-color:$White;
+    position: absolute;
+    top:40%;
+    cursor: pointer;
+   }
+   .next:hover,
+   .previous:hover {
+     width: 30px;
+     height: 30px;
+     outline: 10px solid $Orange;
+     border-radius: 50%;
+     background-color: $Orange;
+     position: absolute;
+     top: 40%;
+     cursor: pointer;
+   }
+
+
+  
+
+   .previous {
+    left:29%;
+    transform: rotate(-2deg);
+   }
+   
+   
+   .next{
+   right:30%;
+      transform: rotate(-2deg);
+     fill: aqua !important;
+   }
+
+
+
+
+
+
+
+
+
+
+
+   //  class for js
+   .focus_thumbnail {
+     outline: 4px solid $Orange;
+     opacity: 0.4;
+     ;
+   }
+
+
+
+   
+ }
+
+
+
+ 
+
+}

@@ -1,0 +1,615 @@
+ @media screen and (min-width:map-get($breakpoint, Desktop)) {
+     .header {
+
+         &_left {
+             grid-column: 1;
+             grid-row: 1;
+             width: max(49vw, 40px);
+             height: 100px;
+             // background-color: violet;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+             align-items: center;
+
+         }
+
+         .icon_menu {
+             display: none;
+         }
+
+         &_logo {
+             width: min(10vw, 400px);
+
+         }
+
+
+
+         &_liste {
+
+             width: max(30vw, 200px);
+             // background-color: yellow;
+             display: flex;
+             justify-content: space-around;
+             list-style-type: none;
+             text-decoration: none;
+             margin-left: 40px;
+
+         }
+
+         .icon_close {
+             display: none;
+         }
+
+         &_liste div {
+
+             display: flex;
+             flex-direction: row;
+
+         }
+
+         &_liste a {
+             text-decoration: none;
+             font-weight: 500;
+             //    font-size:large;
+             font-size: max(1vw, 0.3rem);
+             color: $Dark_grayish_blue;
+             margin-left: 28px;
+
+         }
+
+         &_liste a:hover {
+             border-bottom: 4px solid $Orange;
+             padding-bottom: 38px;
+             color: $Very_vark_blue;
+
+         }
+
+
+
+
+         &_right {
+             //  background-color: aqua;
+             width: max(13vw, 100px);
+             display: flex;
+             align-items: center;
+             justify-content: space-around;
+
+         }
+
+
+
+         &_right label:nth-child(1) {
+             width: 25px;
+             height: 25px;
+             margin-left: 20px;
+             //   background-color: burlywood;
+             position: relative;
+         }
+
+         .compte {
+             width: 20px;
+             height: 15px;
+             border-radius: 50%;
+             background-color: $Orange;
+             position: absolute;
+             text-align: center;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             left: 9px;
+             top: -5px;
+             color: $White;
+             font-size: small;
+             //  display: none;
+         }
+
+
+         //          &_right label:nth-child(1) img:hover+.compte {
+         //              display: block;
+         // }
+
+
+         &_right label:nth-child(2) {
+             width: 60px;
+             height: 60px;
+             border-radius: 50%;
+             // margin-left:40px;
+             //  background-color: burlywood;
+
+             img {
+                 width: 100%;
+                 height: 100%;
+                 object-fit: cover;
+
+             }
+
+         }
+
+
+         &_right label:nth-child(2):hover {
+
+             border: 3px solid $Orange;
+
+
+         }
+
+
+
+
+         .cart {
+             max-width: 300px;
+             width: 90%;
+             height: 200px;
+             background-color: $White;
+             display: none;
+             position: absolute;
+             left: 73%;
+             top: 93%;
+             border-radius: 10px;
+             box-shadow: 1px 23px 26px #c8cacd;
+             //  border: 2px solid rebeccapurple;
+
+         }
+
+         .cart h4 {
+             width: 100%;
+             height: 50px;
+             // background-color: chocolate;
+             border-bottom: 1px solid $Grayish_blue;
+             display: flex;
+
+             align-items: center;
+         }
+
+         .cart h4 span {
+             margin-left: 20px;
+             font-size: large;
+         }
+
+         .cart div:nth-child(2) {
+             width: 100%;
+             height: 80px;
+             //   background-color: cornflowerblue;
+             display: flex;
+             justify-content: space-around;
+             align-items: center;
+             //  display: none;
+
+
+         }
+
+         .cart div img:nth-child(1) {
+             width: 50px;
+             height: 50px;
+             border-radius: 5px;
+             object-fit: cover;
+             margin-left: 0px;
+             cursor: pointer;
+             transform: scale(100%);
+
+         }
+         .cart div img:nth-child(1):active {
+            transform: scale(75%);
+
+         }
+
+         .cart div p {
+             color: $Dark_grayish_blue;
+             font-weight: 400;
+             font-size: small;
+             line-height: 20px;
+
+         }
+
+         .black {
+             color: $Very_vark_blue;
+             font-weight: 700;
+             font-size: small;
+             margin-left: 5px;
+         }
+
+         .cart div img:nth-child(3) {
+             width: 20px;
+             height: 20px;
+             cursor: pointer;
+             transform: scale(100%);
+         }
+
+         .cart div img:nth-child(3):active {
+             transform: scale(125%);
+         }
+
+         .cart div:nth-child(3) {
+             width: 100%;
+             height: 70px;
+             border-radius: 10px;
+             //   background: #000;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+
+
+         //    le button de la cart
+         .cart div:nth-child(3) button {
+             width: 90%;
+             height: 45px;
+             border-radius: 10px;
+             background-color: $Orange;
+             color: $White;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border: 0px solid transparent;
+             cursor: pointer;
+             transform: scale(100%);
+             transition: transform 400ms;
+             //    display: none;
+         }
+
+         .cart div:nth-child(3) button:active {
+             background-color: darken($Orange, 20%);
+             transform: scale(70%);
+         }
+
+
+
+         //  les deux hover pour affiche et mentenir la carte           
+         &_right:hover+.cart {
+             display: block;
+         }
+
+         .cart:hover {
+             display: block;
+         }
+
+
+         //    text du panier vide    
+         .empty {
+             text-align: center;
+             font-size: larger;
+             font-weight: 700;
+             color: $Dark_grayish_blue;
+             display: none;
+         }
+
+
+
+
+
+
+
+
+
+     }
+
+
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width:map-get($breakpoint, Mobile)) {
+     .header {
+
+         &_left {
+             grid-column: 1;
+             grid-row: 1;
+             width: max(50vw, 40px);
+             height: 70px;
+             //   background-color: violet;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+             align-items: center;
+
+         }
+
+         .icon_menu {
+             margin-left: 20px;
+         }
+
+         &_logo {
+             width: min(30vw, 400px);
+             margin-left: -140px;
+
+         }
+
+
+
+         &_liste {
+             width: max(60vw, 200px);
+             height: 100vh;
+             background-color: $White;
+             display: flex;
+             flex-direction: column;
+             //   justify-content: space-around;
+             list-style-type: none;
+             text-decoration: none;
+             position: absolute;
+             top: 0%;
+             transform: translateX(-100%);
+             transition: transform 50ms ease-out;
+             z-index: 2000;
+
+             //   display: none;
+
+         }
+
+         .icon_close {
+             width: 20px;
+             height: 20px;
+             margin-left: 30px;
+             margin-top: 20px;
+         }
+
+         &_liste div {
+
+             margin-left: 30px;
+             margin-top: 50px;
+
+         }
+
+         &_liste a {
+             text-decoration: none;
+             font-weight: 900;
+             //    font-size:large;
+             font-size: max(5vw, 0.3rem);
+             color: $Very_vark_blue;
+             display: block;
+             transform: scale(100%);
+             transition: transform 200ms;
+         }
+
+         &_liste li {
+             padding: 10px 0px 10px 0px;
+         }
+
+         &_liste a:hover {
+
+             transform: scale(110%);
+             color: $Dark_grayish_blue;
+
+
+         }
+
+
+
+
+         &_right {
+             //    background-color: aqua;
+             width: max(30vw, 100px);
+             display: flex;
+             align-items: center;
+             justify-content: space-around;
+
+         }
+
+
+
+
+         &_right label:nth-child(1) {
+             width: 25px;
+             height: 25px;
+             margin-left: 20px;
+             //   background-color: burlywood;
+             position: relative;
+         }
+
+         .compte {
+             width: 20px;
+             height: 15px;
+             border-radius: 50%;
+             background-color: $Orange;
+             position: absolute;
+             text-align: center;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             left: 9px;
+             top: -5px;
+             color: $White;
+             font-size: small;
+             display: none;
+         }
+
+
+         &_right label:nth-child(1) img:hover+.compte {
+             display: block;
+         }
+
+
+         &_right label:nth-child(2) {
+             width: 40px;
+             height: 40px;
+             border-radius: 50%;
+             // margin-left:40px;
+             //  background-color: burlywood;
+
+             img {
+                 width: 100%;
+                 height: 100%;
+                 object-fit: cover;
+
+             }
+
+         }
+
+
+         &_right label:nth-child(2):hover {
+
+             border: 3px solid $Orange;
+
+
+         }
+
+
+
+
+         .cart {
+             max-width: 300px;
+             width: 90%;
+             height: 200px;
+             background-color: $White;
+             display: none;
+             position: absolute;
+             left: 73%;
+             top: 93%;
+             border-radius: 10px;
+             box-shadow: 1px 23px 26px #c8cacd;
+             //  border: 2px solid rebeccapurple;
+
+         }
+
+         .cart h4 {
+             width: 100%;
+             height: 50px;
+             // background-color: chocolate;
+             border-bottom: 1px solid $Grayish_blue;
+             display: flex;
+
+             align-items: center;
+         }
+
+         .cart h4 span {
+             margin-left: 20px;
+             font-size: large;
+         }
+
+         .cart div:nth-child(2) {
+             width: 100%;
+             height: 80px;
+             //   background-color: cornflowerblue;
+             display: flex;
+             justify-content: space-around;
+             align-items: center;
+             //  display: none;
+
+
+         }
+
+         .cart div img:nth-child(1) {
+             width: 50px;
+             height: 50px;
+             border-radius: 5px;
+             object-fit: cover;
+             margin-left: 0px;
+             cursor: pointer;
+
+         }
+
+         .cart div p {
+             color: $Dark_grayish_blue;
+             font-weight: 400;
+             font-size: small;
+             line-height: 20px;
+
+         }
+
+         .black {
+             color: $Very_vark_blue;
+             font-weight: 700;
+             font-size: small;
+             margin-left: 5px;
+         }
+
+         .cart div img:nth-child(3) {
+             width: 20px;
+             height: 20px;
+             cursor: pointer;
+         }
+
+         .cart div:nth-child(3) {
+             width: 100%;
+             height: 70px;
+             border-radius: 10px;
+             //   background: #000;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+
+
+         //    le button de la cart
+         .cart div:nth-child(3) button {
+             width: 90%;
+             height: 45px;
+             border-radius: 10px;
+             background-color: $Orange;
+             color: $White;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border: 0px solid transparent;
+             cursor: pointer;
+             //    display: none;
+         }
+
+         .cart div:nth-child(3) button:active {
+             background-color: darken($Orange, 10%);
+         }
+
+
+
+         //  les deux hover pour affiche et mentenir la carte           
+         &_right:hover+.cart {
+             display: block;
+         }
+
+         .cart:hover {
+             display: block;
+         }
+
+
+         //    text du panier vide    
+         .empty {
+             text-align: center;
+             font-size: larger;
+             font-weight: 700;
+             color: $Dark_grayish_blue;
+             display: none;
+         }
+
+
+
+
+
+
+
+
+
+     }
+
+
+
+
+ }
