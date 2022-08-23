@@ -20,104 +20,119 @@ html {
     
 }
 
-body {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Fraunces',serif;
-    font-family: 'Inter',sans-serif;
-    font-family: 'Montserrat',sans-serif;
-    font-family: 'Kumbh Sans',sans-serif;
-    overflow: hidden;
-    
-}
-
-header{
-    width:80vw;
-    height:100px;
-    // background-color:red;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom:1px solid $Grayish_blue;
-    margin-bottom:20px;
-    position:relative; 
-    
-}
-
-
-main {
-    width:80vw;
-    height:100vh;
-    display:grid ;
-    grid-template-columns:repeat(2,1fr);
-    grid-template-rows:1fr;
-    
-
-
-.main_left {
-    grid-column: 1;
-    grid-row: 1;
-    // background-color: darkgreen;
-    
-
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
-    
-
-}
-
-
-.main_rigth {
-    grid-column: 2;
-    grid-row: 1;
-
-}
 
 
 
-}
+  @media screen and (min-width:map-get($breakpoint, Desktop)){
+    body {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Fraunces', serif;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Kumbh Sans', sans-serif;
+        overflow: hidden;
 
-// for desktop
- #onbre {
-     content: " ";
-     width: 100%;
-     height: 100%;
-     background-color: $Black;
-     opacity: 75%;
-     position: absolute;
-     z-index: 150;
-     display:none;
- }
+    }
+   header {
+       width: 80vw;
+       height: 100px;
+       // background-color:red;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       border-bottom: 1px solid $Grayish_blue;
+       margin-bottom: 20px;
+       position: relative;
 
- .modale {
-    width:80vw;
-    height:90vh;
-    // background-color: red;
-    position: absolute;
-     display:none;
-     flex-direction: column;
-     align-items: center;
-     top:10%;
+   }
 
 
-   
-    z-index: 3000;
+   main {
+       width: 80vw;
+       height: 100vh;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: 1fr;
 
-     
-     
- }
 
+
+       .main_left {
+           grid-column: 1;
+           grid-row: 1;
+           // background-color: darkgreen;
+
+
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+
+
+
+
+       }
+
+
+       .main_rigth {
+           grid-column: 2;
+           grid-row: 1;
+
+       }
+
+
+
+   }
+
+   // for desktop
+   #onbre {
+       content: " ";
+       width: 100%;
+       height: 100%;
+       background-color: $Black;
+       opacity: 75%;
+       position: absolute;
+       z-index: 150;
+       display: none;
+   }
+
+   .modale {
+       width: 80vw;
+       height: 90vh;
+       // background-color: red;
+       position: absolute;
+       display: none;
+       flex-direction: column;
+       align-items: center;
+       top: 10%;
+
+
+
+       z-index: 3000;
+
+
+
+   }
+  }
 
 
 
 
 
  @media screen and (max-width:map-get($breakpoint, Mobile)) {
+    body {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Fraunces', serif;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Kumbh Sans', sans-serif;
+        overflow-x: hidden;
+
+    }
 
     header {
      width: 100vw;
@@ -128,7 +143,7 @@ main {
      justify-content: space-between;
      border-bottom: 1px solid $Grayish_blue;
      margin-bottom: 20px;
-    //  position: relative;
+     position: relative;
     
 
  }
@@ -136,15 +151,50 @@ main {
  #onbre {
     content: " ";
      width: 100%;
-     height: 100%;
+     height: 130vh;
      background-color: $Black;
      opacity: 75%;
      display: block;
      position: absolute;
-     z-index:150;
+     z-index:350;
      display: none;
 }
 
- }
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr 3fr;
+    margin-top:-19px;
+    overflow-x: hidden;
+     
+
+
+    .main_left {
+        grid-column: 1;
+        grid-row: 1;
+        // background-color: darkgreen;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+
+
+    }
+
+
+    .main_rigth {
+        grid-column: 1;
+        grid-row: 2;
+
+    }
+
+ } 
+}
 
 

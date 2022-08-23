@@ -1,6 +1,10 @@
 @media screen and (min-width:map-get($breakpoint, Desktop)) {
     .main_left{
-       
+  .next_left,.previous_left{
+    display:none;
+  }    
+      
+
    .entete {
     width:max(34vw, 100px);
     height:max(57vh, 100px);
@@ -293,5 +297,260 @@ h1 {
 
 
  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:map-get($breakpoint, Mobile)) {
+  .main_left {
+    .next_left{
+   right:33px;
+  
+    }
+    .previous_left {
+      left:33px ;
+      
+
+    }
+ .previous_left,.next_left{
+   width:30px;
+   height:30px;
+   outline:10px solid $White;
+   border-radius:50%;
+   background-color:$White;
+   position: absolute;
+   top:25%;
+   cursor: pointer;
+    display:block;
+
+ }
+ .next:hover,
+ .previous:hover {
+   width: 30px;
+   height: 30px;
+   outline: 10px solid $Orange;
+   border-radius: 50%;
+   background-color: $Orange;
+   position: absolute;
+   top: 40%;
+   cursor: pointer;
+ }
+    .entete {
+      width: 100vw;
+      height:250px;
+      object-fit: cover;
+      cursor: pointer;
+
+
+
+    }
+
+    .thumbnail {
+      display:none;
+    }
+
+    }
+
+
+
+
+  .modale {
+
+    display:none;
+
+
+
+
+  }
+
+
+
+  .main_rigth {
+    // background-color:red;
+    display: flex;
+    // display: fle;
+    // align-items: center;
+    // justify-content: center;
+    flex-direction: column;
+
+    h3 {
+      color: $Orange;
+      text-transform: uppercase;
+      font-size: max(3vw, 1px);
+      word-spacing: 2px;
+      margin-top: 33px;
+      margin-left: 31px;
+    }
+
+    h1 {
+      color: $Very_vark_blue;
+      text-transform: uppercase;
+      font-size: max(6vw, 1px);
+      word-spacing: 2px;
+      margin-top: 21px;
+      margin-left: 33px;
+      text-transform: capitalize;
+    }
+
+    .corps {
+
+      color: $Dark_grayish_blue;
+      text-transform: uppercase;
+      font-size: max(3vw, 1px);
+      word-spacing: 2px;
+      margin-top: 20px;
+      margin-left: 37px;
+      width: 71%;
+      height: 10%;
+      text-transform: capitalize;
+      word-spacing: 2px;
+      line-height: 20px;
+
+    }
+
+    .prix {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 48px;
+      margin-left: 37px;
+    }
+
+
+    .prix p:nth-child(1) {
+      color: $Very_vark_blue;
+      font-size: max(7vw, 1px);
+      font-weight: 900;
+
+    }
+
+    .prix p:nth-child(2) {
+      color: $Orange;
+      font-size: max(4vw, 1px);
+      font-weight: 900;
+      margin-left: 15px;
+      background-color: transparentize($Orange, 0.8);
+
+    }
+
+    .reduction {
+      color: $Grayish_blue;
+      font-size: max(4vw, 1px);
+      font-weight: 900;
+      margin-left: 257px;
+      margin-top: -23px;
+      text-decoration: line-through;
+    }
+
+    ////////
+
+
+    .check {
+      display: flex;
+      flex-direction:column ;
+      margin-top: 28px;
+      margin-left: 38px;
+      // background-color: red;
+      width: max(74vw, 1px);
+      height: max(52vw, 1px);
+    }
+    .incrematation{
+      width:100%;
+      height:50px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows:1fr;
+      // background: #000;
+    }
+
+.moin {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.zero {
+  grid-column: 2;
+  grid-row: 1;
+      border: 0px solid transparent;
+
+}
+
+.plus {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+    .plus,
+    .moin {
+      
+      border: 0px solid transparent;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .plus:active,
+    .moin:active {
+      border: 0px solid transparent;
+      cursor: pointer;
+      background-color: transparentize($Orange, 0.8);
+
+    }
+
+    
+
+    .add {
+      width:100%;
+      height:50px;
+      border: 0px solid transparent;
+      border-radius: 5px;
+      margin-left: 0px;
+      margin-top: 15px;
+      background-color: $Orange;
+      color: $White;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 100ms ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+
+    .add:active {
+      opacity: 0.6;
+    }
+
+    .add img {
+      width: max(30px, 1px);
+      height: max(30px, 1px);
+      margin-right: 10px;
+    }
+
+    .add span {
+      font-weight: 900;
+      font-size: max(4vw, 1px);
+    }
+
+
+  }
 
 }

@@ -36,7 +36,7 @@
        <ul class="header_liste" id="header_liste">
 
         <!-- la croix pour mobile -->
-        <img src="/images/icon-close.svg" alt="icon-close" class="icon_close" id="icon_close">
+        <img src="/images/icon-close-black.svg" alt="icon-close" class="icon_close" id="icon_close">
           
         <div>
         <li><a href="#">Collections</a></li>
@@ -56,7 +56,7 @@
 
       <label>
         <img src="/images/icon-cart.svg" alt="icon-cart">
-        <div class="compte">3</div>
+        <div class="compte" id="compte">0</div>
       </label>
 
       <label>
@@ -70,29 +70,29 @@
 
     <div class="cart">
       <h4><span>cart</span></h4>
-      
 
-      <div>
+      <!-- le paragraphe du vide -->
+      <p class="vide" id="vide">Your cart is empty.</p>
+      <div id="libele">
         <img src="/images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" title="product">
         <p>
           Fall Limited Edition Sneakers <br> 
           <span>$125.00</span> <span>x</span>
-          <span>3</span> <span class="black">$375.00</span> 
+          <span id="multi">0</span> <span class="black" id="black">0</span>
         </p>
 
-        <img src="/images/icon-delete.svg" alt="icon-delete.svg" title="delete">
+        <img src="/images/icon-delete.svg" alt="icon-delete.svg" title="delete" id="suprime">
       </div>
      
      
-      <div>
+      <div id="Checkout">
         
         <button title="check">Checkout</button>
       </div>
 
 
 
-      <!-- le paragraphe du vide -->
-      <p class="empty">Your carts is empty</p>
+      
 
     </div>
 
@@ -103,6 +103,10 @@
 
   <main>
     <section class="main_left">
+      <!-- fleche croll for mobile -->
+      <img src="/images/icon-next.svg" class="next_left" id="next_left">
+      <img src="/images/icon-previous.svg" class="previous_left" id="previous_left">
+
       <img src="/images/image-product-1.jpg" alt="image-product-1" class="entete" id="entete" tabindex="0">
 
       <div class="thumbnail">
@@ -157,12 +161,13 @@
       <div class="check">
 
         <div class="incrematation">
-          <button class="plus"><img src="/images/icon-minus.svg" alt="icon-minus"></button>
-          <button class="zero">0</button>
-          <button class="moin"><img src="/images/icon-plus.svg" alt="icon-plus"></button>
+          <button class="moin" id="moin"><img src="/images/icon-minus.svg" alt="icon-minus"></button>
+          <button class="zero" id="zero">0</button>
+          <button class="plus" id="plus"><img src="/images/icon-plus.svg" alt="icon-plus"></button>
         </div>
 
-        <button class="add"><img src="/images/icon-cart.svg" alt="icon-cart"> <span>Add to cart</span> </button>
+        <button class="add" id="add"><img src="/images/icon-cart 2.svg" alt="icon-cart"> <span>Add to cart</span>
+        </button>
       </div>
 
     </section>

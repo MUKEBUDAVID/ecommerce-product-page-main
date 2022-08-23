@@ -101,7 +101,7 @@
              top: -5px;
              color: $White;
              font-size: small;
-             //  display: none;
+              display: none;
          }
 
 
@@ -167,14 +167,24 @@
              font-size: large;
          }
 
-         .cart div:nth-child(2) {
+         //    text du panier vide 
+      .vide {
+          color: $Dark_grayish_blue;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 50px;
+          font-size:1.3rem;
+          font-weight: 600;
+      }
+         .cart div:nth-child(3) {
              width: 100%;
              height: 80px;
              //   background-color: cornflowerblue;
              display: flex;
              justify-content: space-around;
              align-items: center;
-             //  display: none;
+              display: none;
 
 
          }
@@ -220,7 +230,7 @@
              transform: scale(125%);
          }
 
-         .cart div:nth-child(3) {
+         .cart div:nth-child(4) {
              width: 100%;
              height: 70px;
              border-radius: 10px;
@@ -228,11 +238,12 @@
              display: flex;
              align-items: center;
              justify-content: center;
+             display:none;
          }
 
 
          //    le button de la cart
-         .cart div:nth-child(3) button {
+         .cart div:nth-child(4) button {
              width: 90%;
              height: 45px;
              border-radius: 10px;
@@ -248,7 +259,7 @@
              //    display: none;
          }
 
-         .cart div:nth-child(3) button:active {
+         .cart div:nth-child(4) button:active {
              background-color: darken($Orange, 20%);
              transform: scale(70%);
          }
@@ -265,14 +276,8 @@
          }
 
 
-         //    text du panier vide    
-         .empty {
-             text-align: center;
-             font-size: larger;
-             font-weight: 700;
-             color: $Dark_grayish_blue;
-             display: none;
-         }
+            
+         
 
 
 
@@ -348,7 +353,7 @@
 
          &_liste {
              width: max(60vw, 200px);
-             height: 100vh;
+             height: 130vh;
              background-color: $White;
              display: flex;
              flex-direction: column;
@@ -476,16 +481,18 @@
 
 
          .cart {
-             max-width: 300px;
-             width: 90%;
-             height: 200px;
-             background-color: $White;
-             display: none;
-             position: absolute;
-             left: 73%;
-             top: 93%;
-             border-radius: 10px;
-             box-shadow: 1px 23px 26px #c8cacd;
+                 max-width: 350px;
+                 width: 99%;
+                 height: 220px;
+                 background-color:$White;
+                 display: block;
+                 display: none;
+                 position: absolute;
+                 left: 15px;
+                 top: 80px;
+                 border-radius: 10px;
+                 z-index: 250;
+                  
              //  border: 2px solid rebeccapurple;
 
          }
@@ -493,7 +500,7 @@
          .cart h4 {
              width: 100%;
              height: 50px;
-             // background-color: chocolate;
+            //  background-color: chocolate;
              border-bottom: 1px solid $Grayish_blue;
              display: flex;
 
@@ -505,7 +512,18 @@
              font-size: large;
          }
 
-         .cart div:nth-child(2) {
+         //    text du panier vide 
+         .vide {
+             color: $Dark_grayish_blue;
+             display: none;
+             align-items: center;
+             justify-content: center;
+             margin: 50px;
+             font-size: 1.3rem;
+             font-weight: 600;
+         }
+
+         .cart div:nth-child(3) {
              width: 100%;
              height: 80px;
              //   background-color: cornflowerblue;
@@ -548,7 +566,7 @@
              cursor: pointer;
          }
 
-         .cart div:nth-child(3) {
+         .cart div:nth-child(4) {
              width: 100%;
              height: 70px;
              border-radius: 10px;
@@ -560,7 +578,7 @@
 
 
          //    le button de la cart
-         .cart div:nth-child(3) button {
+         .cart div:nth-child(4) button {
              width: 90%;
              height: 45px;
              border-radius: 10px;
@@ -574,7 +592,7 @@
              //    display: none;
          }
 
-         .cart div:nth-child(3) button:active {
+         .cart div:nth-child(4) button:active {
              background-color: darken($Orange, 10%);
          }
 
@@ -590,14 +608,7 @@
          }
 
 
-         //    text du panier vide    
-         .empty {
-             text-align: center;
-             font-size: larger;
-             font-weight: 700;
-             color: $Dark_grayish_blue;
-             display: none;
-         }
+         
 
 
 
